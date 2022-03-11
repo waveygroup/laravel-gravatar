@@ -138,7 +138,7 @@ foreach ($files as $file) {
     ]);
 
     match (true) {
-        str_contains($file, determineSeparator('src/SkeletonClass.php')) => rename($file, determineSeparator('./src/' . $className . 'Class.php')),
+        str_contains($file, determineSeparator('src/Gravatar.php')) => rename($file, determineSeparator('./src/' . $className . 'Class.php')),
         str_contains($file, 'README.md') => removeReadmeParagraphs($file),
         default => [],
     };

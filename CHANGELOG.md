@@ -1,7 +1,9 @@
 # Changelog
 
-All notable changes to `:package_name` will be documented in this file.
+All notable changes to `laravel-gravatar` will be documented in this file.
 
-## 1.0.0 - 202X-XX-XX
+## 1.0.0 - 2022-04-11
 
 - initial release
+  - Created the Facade `Gravatar`
+  - All variables can be edited via the config, or your `.env` file.

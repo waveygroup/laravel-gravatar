@@ -1,16 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "wavey/laravel-gravatar",
+    "description": "Beautiful Laravel Wrapper for Gravtar",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "laravel",
+        "gravtar",
+        "wavey"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/waveygroup/laravel-gravatar",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Kieran Heron",
+            "email": "kieran@wavey.group",
             "role": "Developer"
         }
     ],
@@ -24,12 +25,22 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Wavey\\LaravelGravatar\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Wavey\\LaravelGravatar\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Wavey\\LaravelGravatar\\GravatarServiceProvider"
+            ]
         }
     },
     "scripts": {
