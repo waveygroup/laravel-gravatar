@@ -11,5 +11,8 @@ class Gravatar extends Facade
      *
      * @return string
      */
-    public static function getFacadeAccessor() { return 'gravatar'; }
+    public static function getFacadeAccessor()
+    {
+        return 'gravatar';
+    }
 }

@@ -3,7 +3,6 @@
 namespace Wavey\LaravelGravatar;
 
 use Illuminate\Support\ServiceProvider;
-use Wavey\LaravelGravatar\Gravatar;
 
 class GravatarServiceProvider extends ServiceProvider
 {
@@ -16,7 +15,7 @@ class GravatarServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/gravatar.php', 'gravatar');
         $this->app->singleton('gravatar', function () {
-            return new Gravatar;
+            return new Gravatar();
         });
     }
 

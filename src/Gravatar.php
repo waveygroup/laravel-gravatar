@@ -11,13 +11,16 @@ class Gravatar
      * Generate the Gravatar URL.
      *
      * @param string $email
-     * @return string
+     *
      * @throws EmailException
+     *
+     * @return string
      */
     public function generate(string $email): string
     {
         $this->validate($email);
         $hash = $this->generateEmailHash($email);
+
         return $this->generateUrl($hash);
     }
 
@@ -25,22 +28,24 @@ class Gravatar
      * Put together the Gravatar URL.
      *
      * @param $hash
+     *
      * @return string
      */
     private function generateUrl($hash): string
     {
         return config('gravatar.base_url')
-            . $hash
-            . '.' . config('gravatar.default_format')
-            . '?s=' . config('gravatar.default_size')
-            . '&d=' . config('gravatar.default_image')
-            . '&r=' . config('gravatar.default_rating');
+            .$hash
+            .'.'.config('gravatar.default_format')
+            .'?s='.config('gravatar.default_size')
+            .'&d='.config('gravatar.default_image')
+            .'&r='.config('gravatar.default_rating');
     }
 
     /**
      * Generate the email hash.
      *
      * @param string $email
+     *
      * @return string
      */
     private function generateEmailHash(string $email): string
@@ -52,13 +57,15 @@ class Gravatar
      * Validate the given email address.
      *
      * @param string $email
-     * @return void
+     *
      * @throws EmailException
+     *
+     * @return void
      */
     private function validate(string $email): void
     {
         $validator = Validator::make(['email' => $email], [
-            'email' => 'required|email'
+            'email' => 'required|email',
         ]);
 
         if ($validator->fails()) {
