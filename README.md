@@ -1,4 +1,5 @@
-# 🤹‍♀️ Laravel Gravatar
+[<img src="https://wavey.group/images/laravel-gravatar.jpg" />](https://wavey.group)
+[<img src="https://wavey.group/images/Ukraine.gif" />](https://ukraine.wavey.group)
 
 Very simple to use Gravatar implementation for Laravel. Install, Include the Facade and then generate, simple!
 ## Installation
