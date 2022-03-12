@@ -59,5 +59,5 @@ return [
     | jpg, jpeg, gif, png
     |
     */
-    'default_format' => env('GRAVATAR_DEFAULT_FORMAT', 'jpg')
+    'default_format' => env('GRAVATAR_DEFAULT_FORMAT', 'jpg'),
 ];
